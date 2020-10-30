@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#nav {
+  background-color: #1b262c;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+#changeCountry {
+  width: 100%;
+  background-color: white;
+}
+
+#changeCountry h4 {
+  width: 100%;
+  text-align: center;
+  color: #1b262c;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+body {
+  background-color: #222233;
+}
+
+.changeDisactive {
+  display: none;
+}
+
+.changeActive {
+  background-color: #0f4c75;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+}
+
+.changeActive h5 {
+  width: 25%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.changeActive h5:hover {
+  color: red;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+  cursor: pointer;
+}
+
+#container {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  -ms-grid-columns: auto 50% auto;
+      grid-template-columns: auto 50% auto;
+      grid-template-areas: "left-aside main right-aside";
+  justify-items: center;
+}
+
+#container #leftAside {
+  grid-area: 'left-aside';
+  margin: 20px;
+  background-color: #0f4c75;
+  border-left: 4px solid white;
+  padding: 10px;
+  height: auto;
+}
+
+#container #leftAside ul {
+  text-indent: 5px;
+  list-style-type: none;
+}
+
+#container #leftAside ul li {
+  border-left: 2px solid #1b262c;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  margin: 10px 0;
+  line-height: 50px;
+  width: 100%;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#container #leftAside ul li:hover {
+  -webkit-box-shadow: inset 100px 0px 116px -125px #1b262c;
+          box-shadow: inset 100px 0px 116px -125px #1b262c;
+}
+
+#container #leftAside ul .active {
+  border-color: red;
+}
+
+#container #leftAside ul .active:hover {
+  -webkit-box-shadow: inset 100px 0px 116px -125px red;
+          box-shadow: inset 100px 0px 116px -125px red;
+}
+
+#container #rightAside {
+  grid-area: 'right-aside';
+  margin: 20px;
+  background-color: #0f4c75;
+  border-right: 4px solid white;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+#container #rightAside ul {
+  text-indent: 5px;
+  list-style-type: none;
+}
+
+#container #rightAside ul li {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  margin: 10px 0;
+  line-height: 50px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+#container #rightAside ul li i {
+  color: green;
+}
+
+#container #rightAside ul .confirmed {
+  border-left: 2px solid #242440;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
+}
+
+#container #rightAside ul .confirmed:hover {
+  -webkit-box-shadow: inset 100px 0px 116px -125px #242440;
+          box-shadow: inset 100px 0px 116px -125px #242440;
+}
+
+#container #rightAside ul .recovered {
+  border-left: 2px solid #8596a7;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
+}
+
+#container #rightAside ul .recovered:hover {
+  -webkit-box-shadow: inset 100px 0px 116px -125px #8596a7;
+          box-shadow: inset 100px 0px 116px -125px #8596a7;
+}
+
+#container #rightAside ul .deaths {
+  border-left: 2px solid #a7cccc;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
+}
+
+#container #rightAside ul .deaths:hover {
+  -webkit-box-shadow: inset 100px 0px 116px -125px #a7cccc;
+          box-shadow: inset 100px 0px 116px -125px #a7cccc;
+}
+
+#container #main {
+  grid-area: 'main';
+  margin: 20px;
+}
+
+#container #main #countryName {
+  text-align: center;
+  color: white;
+  border: 5px solid #1b262c;
+  background-color: #0f4c75;
+  padding: 10px;
+}
+
+#container #main canvas {
+  margin-top: 10px;
+  border: 5px solid #1b262c;
+  background-color: #0f4c75;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.disactive {
+  display: none !important;
+}
+/*# sourceMappingURL=index.css.map */

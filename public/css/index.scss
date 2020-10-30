@@ -1,0 +1,189 @@
+@import "colors";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#nav{
+    background-color: $varBlack;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+#changeCountry{
+    width: 100%;
+    background-color: white;
+    h4{
+        width: 100%;
+        text-align: center;
+        color: $varBlack;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+body{
+    background-color: $varLightBlue;
+}
+
+.changeDisactive{
+    display: none;
+}
+
+.changeActive{
+    background-color: $varBlue;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+
+    h5{
+        width: 25%;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        
+    }
+
+    h5:hover{
+        color: red;
+        border-left: 2px solid red;
+        border-right: 2px solid red;
+        cursor: pointer;
+    }
+}
+
+#container{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: auto 50% auto;
+    grid-template-areas: "left-aside main right-aside";
+    justify-items: center;
+
+    #leftAside{
+        grid-area: 'left-aside';
+        margin: 20px;
+        background-color: $varBlue;
+        border-left: 4px solid white;
+        padding: 10px;
+        height: auto; 
+
+        ul{
+            text-indent: 5px;
+            list-style-type: none;
+            
+            li{
+                border-left: 2px solid $varBlack;
+                text-transform: uppercase;
+                color: white;
+                letter-spacing: 2px;
+                margin: 10px 0;
+                line-height: 50px;
+                width: 100%;
+                transition: box-shadow 0.5s ease-in-out;
+                cursor: pointer;
+                white-space: nowrap;
+            }
+
+            li:hover{
+                box-shadow: inset 100px 0px 116px -125px $varBlack;
+            }
+
+            .active{
+                border-color: red;
+            }
+
+            .active:hover{
+                box-shadow: inset 100px 0px 116px -125px red;
+            }
+            
+        }
+
+    }
+
+    #rightAside{
+        grid-area: 'right-aside';
+        margin: 20px;
+        background-color: $varBlue;
+        border-right: 4px solid white;
+        text-transform: uppercase;
+        padding: 10px;
+
+        ul{
+            text-indent: 5px;
+            list-style-type: none;
+            li{
+                
+                text-transform: uppercase;
+                color: white;
+                letter-spacing: 2px;
+                margin: 10px 0;
+                line-height: 50px;
+                width: 100%;
+                white-space: nowrap;
+
+                i{
+                    color: green;
+                }
+            }  
+            
+            .confirmed{
+                border-left: 2px solid rgb(36, 36, 64);
+                transition: box-shadow 0.5s ease-in-out;
+            }
+            .confirmed:hover{
+                box-shadow: inset 100px 0px 116px -125px rgb(36, 36, 64);
+            }
+
+            .recovered{
+                border-left: 2px solid rgb(133, 150, 167);
+                transition: box-shadow 0.5s ease-in-out;
+            }
+            .recovered:hover{
+                box-shadow: inset 100px 0px 116px -125px rgb(133, 150, 167);
+            }
+
+            .deaths{
+                border-left: 2px solid rgb(167, 204, 204);
+                transition: box-shadow 0.5s ease-in-out;
+            }
+            .deaths:hover{
+                box-shadow: inset 100px 0px 116px -125px rgb(167, 204, 204);
+            }
+        }
+    }
+
+    #main {
+        grid-area: 'main';
+        margin: 20px;
+
+        #countryName{
+            text-align: center;
+            color: white;
+            border: 5px solid $varBlack;
+            background-color: $varBlue;
+            padding: 10px;
+        }
+
+        canvas{
+            margin-top: 10px;
+            border: 5px solid $varBlack;
+            background-color: $varBlue;
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.disactive{
+    display: none !important; 
+}
+
